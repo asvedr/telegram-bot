@@ -13,7 +13,7 @@ async fn main() -> Result<(), Error> {
     while let Some(update) = stream.next().await {
         // If the received update contains a new message...
         let update = update?;
-        if let UpdateKind::Message(message) = update.kind {
+        if let Some(UpdateKind::Message(message)) = update.kind {
             if let MessageKind::Text { ref data, .. } = message.kind {
                 // Print received text message to stdout.
                 println!("<{}>: {}", &message.from.first_name, data);

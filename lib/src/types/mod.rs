@@ -3,4 +3,4 @@
 pub mod requests;
 pub use requests::*;
 
-pub use telegram_bot_raw::types::*;
+pub use telegram_bot_raw_ars::types::*;

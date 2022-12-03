@@ -17,7 +17,7 @@ use hyper_rustls::HttpsConnector;
 #[cfg(feature = "openssl")]
 use hyper_tls::HttpsConnector;
 use multipart::client::lazy::Multipart;
-use telegram_bot_raw::{
+use telegram_bot_raw_ars::{
     Body as TelegramBody, HttpRequest, HttpResponse, Method as TelegramMethod, MultipartValue, Text,
 };
 

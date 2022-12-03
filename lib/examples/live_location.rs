@@ -33,7 +33,7 @@ async fn main() -> Result<(), Error> {
 
     while let Some(update) = stream.next().await {
         let update = update?;
-        if let UpdateKind::Message(message) = update.kind {
+        if let Some(UpdateKind::Message(message)) = update.kind {
             if let MessageKind::Text { ref data, .. } = message.kind {
                 match data.as_str() {
                     "/livelocation" => test(api.clone(), message.clone()).await?,

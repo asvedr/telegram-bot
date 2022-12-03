@@ -8,7 +8,7 @@ use std::time::Duration;
 
 use futures::Stream;
 
-use telegram_bot_raw::{AllowedUpdate, GetUpdates, Integer, Update};
+use telegram_bot_raw_ars::{AllowedUpdate, GetUpdates, Integer, Update};
 
 use crate::api::Api;
 use crate::errors::Error;

@@ -63,7 +63,7 @@ async fn main() -> Result<(), Error> {
 
     while let Some(update) = stream.next().await {
         let update = update?;
-        if let UpdateKind::Message(message) = update.kind {
+        if let Some(UpdateKind::Message(message)) = update.kind {
             match message.kind {
                 MessageKind::Text { ref data, .. } if data.as_str() == "/test" => {
                     let api = api.clone();

@@ -18,7 +18,7 @@ async fn main() -> Result<(), Error> {
     let mut stream = api.stream();
     while let Some(update) = stream.next().await {
         let update = update?;
-        if let UpdateKind::Message(message) = update.kind {
+        if let Some(UpdateKind::Message(message)) = update.kind {
             if let MessageKind::Text { ref data, .. } = message.kind {
                 api.send(message.text_reply(format!(
                     "Hi, {}! You just wrote '{}'",

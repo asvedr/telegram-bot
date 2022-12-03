@@ -9,7 +9,7 @@ pub struct Update {
     pub id: Integer,
     /// Kind of the incoming update.
     #[serde(flatten)]
-    pub kind: UpdateKind,
+    pub kind: Option<UpdateKind>,
 }
 
 /// Kind of the incoming update.

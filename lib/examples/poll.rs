@@ -71,7 +71,7 @@ async fn main() -> Result<(), Error> {
     while let Some(update) = stream.next().await {
         let update = update?;
 
-        match update.kind {
+        match update.kind.unwrap() {
             UpdateKind::Message(message) => match message.kind {
                 MessageKind::Text { ref data, .. } => match data.as_str() {
                     "/poll" => test_anonymous_poll(api.clone(), message).await?,

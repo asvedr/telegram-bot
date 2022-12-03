@@ -29,7 +29,7 @@ async fn main() -> Result<(), Error> {
     // Fetch new updates via long poll method
     while let Some(update) = stream.next().await {
         let update = update?;
-        if let UpdateKind::Message(message) = update.kind {
+        if let Some(UpdateKind::Message(message)) = update.kind {
             process(api.clone(), message).await?
         }
     }
