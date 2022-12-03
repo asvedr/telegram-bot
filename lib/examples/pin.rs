@@ -1,7 +1,7 @@
 use std::env;
 
 use futures::StreamExt;
-use telegram_bot::*;
+use telegram_bot_ars::*;
 
 async fn process(api: Api, message: Message) -> Result<(), Error> {
     if let MessageKind::Text { ref data, .. } = message.kind {

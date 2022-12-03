@@ -4,8 +4,8 @@ use std::time::Duration;
 use futures::StreamExt;
 use tokio::time::sleep;
 
-use telegram_bot::prelude::*;
-use telegram_bot::{
+use telegram_bot_ars::prelude::*;
+use telegram_bot_ars::{
     Api, Error, Message, MessageKind, Poll, PollAnswer, SendPoll, UpdateKind, User,
 };
 

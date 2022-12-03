@@ -1,7 +1,7 @@
 use std::env;
 
 use futures::StreamExt;
-use telegram_bot::*;
+use telegram_bot_ars::*;
 
 #[tokio::main]
 async fn main() -> Result<(), Error> {
@@ -10,7 +10,7 @@ async fn main() -> Result<(), Error> {
 
     tracing::subscriber::set_global_default(
         tracing_subscriber::FmtSubscriber::builder()
-            .with_env_filter("telegram_bot=trace")
+            .with_env_filter("telegram_bot_ars=trace")
             .finish(),
     )
     .unwrap();

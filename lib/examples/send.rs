@@ -2,8 +2,8 @@ use std::env;
 
 use futures::StreamExt;
 
-use telegram_bot::prelude::*;
-use telegram_bot::{Api, Error, InputFileRef, InputFileUpload, Message, MessageKind, UpdateKind};
+use telegram_bot_ars::prelude::*;
+use telegram_bot_ars::{Api, Error, InputFileRef, InputFileUpload, Message, MessageKind, UpdateKind};
 
 async fn run_test(api: Api, message: Message) -> Result<(), Error> {
     let chat = message.chat.clone();

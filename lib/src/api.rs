@@ -32,7 +32,7 @@ impl Api {
     /// Using default connector.
     ///
     /// ```rust
-    /// use telegram_bot::Api;
+    /// use telegram_bot_ars::Api;
     ///
     /// # fn main() {
     /// # let telegram_token = "token";
@@ -57,7 +57,7 @@ impl Api {
     /// # Examples
     ///
     /// ```rust
-    /// # use telegram_bot::Api;
+    /// # use telegram_bot_ars::Api;
     /// use futures::StreamExt;
     ///
     /// # #[tokio::main]
@@ -78,7 +78,7 @@ impl Api {
     /// # Examples
     ///
     /// ```rust
-    /// # use telegram_bot::{Api, ChatId, prelude::*};
+    /// # use telegram_bot_ars::{Api, ChatId, prelude::*};
     /// # use std::time::Duration;
     /// #
     /// # #[tokio::main]
@@ -106,7 +106,7 @@ impl Api {
     /// # Examples
     ///
     /// ```rust
-    /// # use telegram_bot::{Api, GetMe};
+    /// # use telegram_bot_ars::{Api, GetMe};
     /// # use std::time::Duration;
     /// #
     /// # #[tokio::main]
@@ -146,7 +146,7 @@ impl Api {
     /// # Examples
     ///
     /// ```rust
-    /// # use telegram_bot::{Api, GetMe};
+    /// # use telegram_bot_ars::{Api, GetMe};
     /// #
     /// # #[tokio::main]
     /// # async fn main() {

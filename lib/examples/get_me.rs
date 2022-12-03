@@ -1,6 +1,6 @@
 use std::env;
 
-use telegram_bot::{Api, Error, GetMe};
+use telegram_bot_ars::{Api, Error, GetMe};
 
 #[tokio::main]
 async fn main() -> Result<(), Error> {

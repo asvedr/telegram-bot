@@ -2,8 +2,8 @@ use std::env;
 use std::time::Duration;
 
 use futures::StreamExt;
-use telegram_bot::prelude::*;
-use telegram_bot::{Api, Error, Message, MessageKind, ParseMode, UpdateKind};
+use telegram_bot_ars::prelude::*;
+use telegram_bot_ars::{Api, Error, Message, MessageKind, ParseMode, UpdateKind};
 use tokio::time::sleep;
 
 async fn test_message(api: Api, message: Message) -> Result<(), Error> {
