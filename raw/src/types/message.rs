@@ -775,8 +775,10 @@ pub struct Audio {
 /// This object represents a general file (as opposed to photos, voice messages and audio files).
 #[derive(Debug, Clone, PartialEq, PartialOrd, Deserialize)]
 pub struct Document {
-    /// Unique file identifier.
+    /// Unique file identifier for one bot
     pub file_id: String,
+    /// Unique file identifier for all bots
+    pub file_unique_id: Option<String>,
     /// Document thumbnail as defined by sender.
     pub thumb: Option<PhotoSize>,
     /// Original filename as defined by sender.
@@ -785,6 +787,8 @@ pub struct Document {
     pub mime_type: Option<String>,
     /// File size.
     pub file_size: Option<Integer>,
+    /// Path for download
+    pub file_path: Option<String>,
 }
 
 /// This object represents a sticker.
